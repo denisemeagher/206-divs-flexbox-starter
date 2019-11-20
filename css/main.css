@@ -40,7 +40,7 @@ html {
 
 hr {
   display: block;
-  height: 1px;
+  height: 0px;
   border: 0;
   border-top: 1px solid #ccc;
   margin: 1em 0;
@@ -102,32 +102,85 @@ html {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kulim Park', sans-serif;
   padding: 2em;
   font-size: 1.25em;
   height: 100%;
 }
 
-.wrapper {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-between;
-  align-items: center;
-  font-weight: 700;
-}
-
-.div-1, .div-2, .div-3 {
+header, footer, main {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 30%; */
+  color: #fff;
+}
+
+header,
+footer {
+  height: auto;
+  width: 100%;
+
+}
+
+main {
+  height: auto;
+  width: 100%;
+  border-bottom: 1px solid rgb(255,185,60);
+  line-height: 1.5em;
+  font-size: 1.25em;
+}
+
+
+footer {
+  align-items: center;
+  border-top: 1px solid rgb(255,185,60);
+  padding: 3em 0;
+  line-height: 1.5em;
+  font-size: 1em;
+  font-weight: 300;
+  text-align: center;
+}
+
+footer img {
+  width: 45px;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-flow: row wrap;
+}
+
+#div-1, #div-2, #div-3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: #fff;
   line-height: 1.5em;
   font-size: 1.25em;
   height: auto;
+  margin: 1.5rem 0;
+
 }
 
+.flex-items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+}
+
+.accent-color {
+  color: rgb(255,185,60);
+}
+
+h1 {
+  font-family: 'Rock Salt', cursive;
+  letter-spacing: .25rem;
+  text-align: center;
+}
 
 
 /* ==========================================================================
@@ -210,14 +263,27 @@ body {
    Modify as content requires.
    ========================================================================== */
  @media all and (min-width: 1200px) {
-     .div-1, .div-2, .div-3 {
+     .flex-items {
+       padding: 0 20px 0 10px;
        flex-basis: 30%;
      }
 
-     .div-1, .div-2 {
+     #div-1, #div-2 {
        border-right: 1px solid rgb(255,185,60);
-       padding-right: 30px;
      }
+
+     main p {
+       max-width: 80%;
+       margin: 3em auto;
+       line-height: 1.5em;
+       font-size: 1.5em;
+     }
+
+     h1 {
+       font-size: 3em;
+       line-height: 2em;
+     }
+
  }
 
 @media print,
